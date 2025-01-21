@@ -1,0 +1,72 @@
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
+
+local Window = Fluent:CreateWindow({
+    Title = "NT MOBA",
+    SubTitle = " | Tổng Hợp Script Ver1",
+    TabWidth = 160,
+    Size = UDim2.fromOffset(480, 360),
+    Acrylic = false,
+    Theme = "Dark",
+    MinimizeKey = Enum.KeyCode.LeftControl
+})
+
+Fluent:Notify({
+    Title = "NT MOBA",
+    Content = "Chào mấy ní!",
+    SubContent = "loading...",
+    Duration = 5
+})
+
+local Tabs = {
+    BloxFruits = Window:AddTab({ Title = "Scripts Blox Fruits", Icon = "rbxassetid://122376714508463" }),
+    YouTube = Window:AddTab({ Title = "Youtube Channel", Icon = "rbxassetid://122376714508463" }),
+    Updates = Window:AddTab({ Title = "Update Information", Icon = "rbxassetid://122376714508463" }),
+}
+
+Tabs.BloxFruits:AddButton({
+    Title = "QuantumOnyx",
+    Description = "",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Trustmenotcondom/QTONYX/refs/heads/main/QuantumOnyx.lua"))()
+    end
+})
+
+Tabs.BloxFruits:AddButton({
+    Title = "REDzHUB",
+    Description = "",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
+    end
+})
+
+Tabs.BloxFruits:AddButton({
+    Title = "W-azure",
+    Description = "",
+    Callback = function()
+        getgenv().FixCrash = false
+        getgenv().FixCrash2 = false
+        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
+    end
+})
+
+Tabs.BloxFruits:AddButton({
+    Title = "Neva Hub",
+    Description = "",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/VEZ2/NEVAHUB/main/2'))()
+    end
+})
+
+Tabs.BloxFruits:AddButton({
+    Title = "Fix Lag",
+    Description = "",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/TurboLite/Script/main/FixLag.lua"))()
+    end
+})
+
+Tabs.YouTube:AddSection("NT MOBA")
+
+Tabs.Updates:AddSection("Tổng Hợp Nhiều Script Vip Pro Miễn Phí")
